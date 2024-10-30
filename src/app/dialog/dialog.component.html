@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Deposit or withdraw money :)</h1>
+<form [formGroup]="form">
+  <div mat-dialog-content>
+     <h3>Current balance: {{data}}</h3>
+     <mat-form-field class="field">
+       <mat-label>Add money</mat-label>
+       <input matInput
+              type="number"
+              formControlName="addMoney">
+     </mat-form-field>
+
+     <mat-form-field class="field">
+       <mat-label>Withdraw money</mat-label>
+       <input matInput
+              type="number"
+              formControlName="withdrawMoney">
+       <mat-error *ngIf="$any(form)?.get('withdrawMoney').hasError('max')">Not enough money!</mat-error>
+     </mat-form-field>
+   </div>
+</form>
+<div mat-dialog-actions class="wrapper-btn">
+  <button mat-button (click)="onCloseDialog()">Close</button>
+  <button mat-button (click)="save(form)" [disabled]="!form.valid">Save</button>
+</div>

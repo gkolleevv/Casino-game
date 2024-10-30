@@ -1,0 +1,75 @@
+<div class="header">
+  <div class="first">
+   <span>
+   Balance: {{gameService.budget}}
+   </span>
+
+    <button class="wallet" mat-button (click)="openDialog()">
+      Wallet
+    </button>
+  </div>
+
+  <div class="second">
+   <span>
+    Total bets: {{gameService.bets.totalBets}}
+   </span>
+
+    <span>
+    Winning bets: {{gameService.bets.winningBets}}
+    </span>
+
+    <span>
+    Loosing bets: {{gameService.bets.loosingBets}}
+   </span>
+  </div>
+</div>
+
+<div class="wrapper">
+
+    <div class="column">
+      <div class="column-divider">
+        {{elements[0][0]}}
+      </div>
+      <div class="column-divider">
+        {{elements[1][0]}}
+      </div>
+      <div class="column-divider">
+        {{elements[2][0]}}
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column-divider">
+        {{elements[0][1]}}
+      </div>
+      <div class="column-divider">
+        {{elements[1][1]}}
+      </div>
+      <div class="column-divider">
+        {{elements[2][1]}}
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="column-divider">
+        {{elements[0][2]}}
+      </div>
+      <div class="column-divider">
+        {{elements[1][2]}}
+      </div>
+      <div class="column-divider">
+        {{elements[2][2]}}
+      </div>
+    </div>
+
+  <div class="center-left">
+    <mat-form-field class="field">
+      <mat-label>Select your bet</mat-label>
+      <input matInput
+             type="number"
+             [formControl]="selectedBet">
+    </mat-form-field>
+    <button mat-button class="play" (click)="loadSymbols()">Play</button>
+  </div>
+</div>
+

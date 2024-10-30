@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .first {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+
+    .wallet {
+      background-color: cornflowerblue;
+    }
+  }
+
+  .second {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px auto auto;
+  width: 500px;
+}
+
+.column {
+  flex: 33.33%;
+  max-width: 33.33%;
+}
+.column-divider {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 1rem;
+}
+
+.center-left {
+  margin-left: 30px;
+}
+
+.field {
+  width: 130px;
+}
+
+.play {
+  width: 130px;
+  background-color: #9aff64;
+}
+
